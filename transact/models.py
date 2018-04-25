@@ -50,10 +50,13 @@ class Pic(models.Model):
 
 class Profile(models.Model):
 	username = models.CharField(default='User',max_length=30)
+	email = models.CharField(default='email',max_length=30)
 	profile_pic = models.ImageField(upload_to = "profile/",null=True)
-	bio = models.TextField(default='',blank = True)
-	first_name = models.CharField(max_length =30)
-	last_name = models.CharField(max_length =30)
+	Phone_number = models.CharField(max_length =30)
+	Amount = models.CharField(max_length =30)
+	withdraw = models.CharField(max_length =30)
+	Balance = models.CharField(max_length =30)
+
 
 	def __str__(self):
 		return self.username
