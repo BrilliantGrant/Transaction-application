@@ -9,9 +9,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
-
+	{% for pic in pic_posts%}
+<div class="row">
+	<div class="col-md-3">
 <div class="w3-container">
-{% for pic in pic_posts%}
+
   <div class="w3-card-4 w3-dark-grey" style="width:40%;height: 370px">
 
     <div class="w3-container w3-center">
@@ -27,6 +29,11 @@
 
   </div>
 </div>
+</div>
+</div>
+</a>
+
+<br>
 {% endfor %}
 
 </body>
