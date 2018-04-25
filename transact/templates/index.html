@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{{ block.super }}
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+{% for pic in pic_posts%}
+  <div class="w3-card-4 w3-dark-grey" style="width:50%">
+
+    <div class="w3-container w3-center">
+      <h3>Friend Request</h3>
+      <img src="{{pic.pic.url}}" alt="Avatar" style="width:80%">
+      <h5>JClient</h5>
+
+      <div class="w3-section">
+        <button class="w3-button w3-green">Accept</button>
+        <button class="w3-button w3-red">Decline</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endfor %}
+
+</body>
+</html>
+
+ 
+
+{% endblock %}
