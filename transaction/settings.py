@@ -109,6 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+db_from_env = dj_database_url.config(conn_max_age=500)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
